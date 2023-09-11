@@ -6,9 +6,10 @@ fn main() {
     loop {
         let mut input = String::new();
 
-        println!("Enter an unassigned integer value:");
+        println!("Enter an unsigned integer value:");
 
-        io::stdin().read_line(&mut input).expect("Failed to read input.");
+        io::stdin().read_line(&mut input)
+            .expect("Failed to read input.");
 
         n = match input.trim().parse() {
             Ok(input) => input,
